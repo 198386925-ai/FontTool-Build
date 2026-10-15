@@ -4,7 +4,7 @@ import UIKit
 import Combine
 
 /// 字体文件信息
-struct FontInfo: Identifiable, Codable, Equatable {
+struct FontInfo: Identifiable, Codable, Equatable, Hashable {
     let fileName: String
     let familyName: String
     let styleName: String

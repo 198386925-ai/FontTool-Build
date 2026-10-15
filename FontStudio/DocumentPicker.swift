@@ -4,11 +4,12 @@ import UIKit
 
 /// 系统文件选择器（只选字体文件）
 struct DocumentPicker: UIViewControllerRepresentable {
+    var types: [UTType] = [.font]
     var onPick: (URL) -> Void
     var onCancel: () -> Void = {}
 
     func makeUIViewController(context: Context) -> UIDocumentPickerViewController {
-        let picker = UIDocumentPickerViewController(forOpeningContentTypes: [UTType.font], asCopy: true)
+        let picker = UIDocumentPickerViewController(forOpeningContentTypes: types, asCopy: true)
         picker.delegate = context.coordinator
         picker.allowsMultipleSelection = false
         return picker
