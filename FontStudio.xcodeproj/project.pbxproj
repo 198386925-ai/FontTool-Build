@@ -11,7 +11,6 @@
 		A10000000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000002 /* ContentView.swift */; };
 		A10000000000000000000003 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000003 /* PreviewView.swift */; };
 		A10000000000000000000004 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000004 /* LibraryView.swift */; };
-		A10000000000000000000005 /* SystemFontsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000005 /* SystemFontsView.swift */; };
 		A10000000000000000000006 /* InstallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000006 /* InstallView.swift */; };
 		A10000000000000000000007 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000007 /* FontManager.swift */; };
 		A10000000000000000000008 /* ProfileGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000008 /* ProfileGenerator.swift */; };
@@ -25,7 +24,6 @@
 		B10000000000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B10000000000000000000003 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		B10000000000000000000004 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
-		B10000000000000000000005 /* SystemFontsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemFontsView.swift; sourceTree = "<group>"; };
 		B10000000000000000000006 /* InstallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallView.swift; sourceTree = "<group>"; };
 		B10000000000000000000007 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		B10000000000000000000008 /* ProfileGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGenerator.swift; sourceTree = "<group>"; };
@@ -61,7 +59,6 @@
 				B10000000000000000000002 /* ContentView.swift */,
 				B10000000000000000000003 /* PreviewView.swift */,
 				B10000000000000000000004 /* LibraryView.swift */,
-				B10000000000000000000005 /* SystemFontsView.swift */,
 				B10000000000000000000006 /* InstallView.swift */,
 				B10000000000000000000007 /* FontManager.swift */,
 				B10000000000000000000008 /* ProfileGenerator.swift */,
@@ -141,7 +138,6 @@
 				A10000000000000000000002 /* ContentView.swift in Sources */,
 				A10000000000000000000003 /* PreviewView.swift in Sources */,
 				A10000000000000000000004 /* LibraryView.swift in Sources */,
-				A10000000000000000000005 /* SystemFontsView.swift in Sources */,
 				A10000000000000000000006 /* InstallView.swift in Sources */,
 				A10000000000000000000007 /* FontManager.swift in Sources */,
 				A10000000000000000000008 /* ProfileGenerator.swift in Sources */,
@@ -189,7 +185,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0;
+				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = FontStudio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -208,7 +204,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0;
+				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = FontStudio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
