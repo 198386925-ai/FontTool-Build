@@ -19,7 +19,6 @@
 		A10000000000000000000011 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000011 /* Assets.xcassets */; };
 		A10000000000000000000012 /* FontConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000014 /* FontConverter.swift */; };
 		A10000000000000000000013 /* ConvertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000015 /* ConvertView.swift */; };
-		A10000000000000000000014 /* PosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000016 /* PosterView.swift */; };
 		A10000000000000000000015 /* ReplaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000017 /* ReplaceView.swift */; };
 		A10000000000000000000016 /* ToolboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000018 /* ToolboxView.swift */; };
 		A10000000000000000000017 /* AdjustParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000019 /* AdjustParams.swift */; };
@@ -44,7 +43,6 @@
 		B10000000000000000000013 /* FontStudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FontStudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B10000000000000000000014 /* FontConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontConverter.swift; sourceTree = "<group>"; };
 		B10000000000000000000015 /* ConvertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertView.swift; sourceTree = "<group>"; };
-		B10000000000000000000016 /* PosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterView.swift; sourceTree = "<group>"; };
 		B10000000000000000000017 /* ReplaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceView.swift; sourceTree = "<group>"; };
 		B10000000000000000000018 /* ToolboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolboxView.swift; sourceTree = "<group>"; };
 		B10000000000000000000019 /* AdjustParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustParams.swift; sourceTree = "<group>"; };
@@ -86,7 +84,6 @@
 				B10000000000000000000010 /* ShareSheet.swift */,
 				B10000000000000000000014 /* FontConverter.swift */,
 				B10000000000000000000015 /* ConvertView.swift */,
-				B10000000000000000000016 /* PosterView.swift */,
 				B10000000000000000000017 /* ReplaceView.swift */,
 				B10000000000000000000018 /* ToolboxView.swift */,
 				B10000000000000000000019 /* AdjustParams.swift */,
@@ -175,7 +172,6 @@
 				A10000000000000000000010 /* ShareSheet.swift in Sources */,
 				A10000000000000000000012 /* FontConverter.swift in Sources */,
 				A10000000000000000000013 /* ConvertView.swift in Sources */,
-				A10000000000000000000014 /* PosterView.swift in Sources */,
 				A10000000000000000000015 /* ReplaceView.swift in Sources */,
 				A10000000000000000000016 /* ToolboxView.swift in Sources */,
 				A10000000000000000000017 /* AdjustParams.swift in Sources */,
@@ -225,7 +221,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = FontStudio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -244,7 +240,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = FontStudio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
