@@ -29,6 +29,30 @@ struct ToolboxView: View {
                         Image(systemName: "textformat.abc")
                     }
                 }
+                NavigationLink(destination: AdjustView()) {
+                    Label {
+                        VStack(alignment: .leading) {
+                            Text("字体调整")
+                            Text("大小 / 粗细 / 间距 / 基线 / 颜色，含草稿箱")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                        }
+                    } icon: {
+                        Image(systemName: "slider.horizontal.3")
+                    }
+                }
+                NavigationLink(destination: PreferencesView()) {
+                    Label {
+                        VStack(alignment: .leading) {
+                            Text("偏好设置")
+                            Text("默认预览文本、默认背景色")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                        }
+                    } icon: {
+                        Image(systemName: "gearshape")
+                    }
+                }
             }
             .navigationTitle("工具箱")
         }
