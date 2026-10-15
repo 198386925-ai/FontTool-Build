@@ -93,7 +93,6 @@ enum FontConverter {
                         expected,
                         sp.bindMemory(to: UInt8.self).baseAddress!,
                         d.count,
-                        nil,
                         scp.bindMemory(to: UInt8.self).baseAddress,
                         COMPRESSION_ZLIB)
                 }
