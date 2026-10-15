@@ -1,0 +1,60 @@
+name: Build FontStudio IPA
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fontstudio-ipa-main
+  cancel-in-progress: true
+
+jobs:
+  build:
+    if: github.event.repository.private == false
+    runs-on: macos-15-intel
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Select Xcode 26
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -d /Applications/Xcode_26.3.app/Contents/Developer
+          echo 'DEVELOPER_DIR=/Applications/Xcode_26.3.app/Contents/Developer' >> "$GITHUB_ENV"
+      - name: Verify checked-out source
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "Building repository source at $GITHUB_SHA"
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          test -f FontStudio.xcodeproj/project.pbxproj
+          test -f FontStudio.xcodeproj/xcshareddata/xcschemes/FontStudio.xcscheme
+          test -f scripts/build-ipa.sh
+          test ! -e /tmp/fontstudio-src.zip
+          git status --short
+      - name: Build unsigned IPA from repository source
+        shell: bash
+        run: |
+          set -euo pipefail
+          bash scripts/build-ipa.sh
+          ls -lh output/
+          shasum -a 256 output/*.ipa output/*-src.zip
+      - name: Save IPA and source backup
+        uses: actions/upload-artifact@v4
+        with:
+          name: FontStudio-IPA-and-source
+          path: output/
+          if-no-files-found: error
+          retention-days: 5
+      - name: Publish latest IPA link
+        if: success()
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          bash .github/scripts/publish-ipa.sh
