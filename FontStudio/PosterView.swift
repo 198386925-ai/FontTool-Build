@@ -41,9 +41,10 @@ struct PosterLayerView: View {
             .rotationEffect(.degrees(layer.rotation) + rotT)
             .offset(x: layer.offset.width + dragT.width, y: layer.offset.height + dragT.height)
             .overlay(
-                isSelected
-                    ? RoundedRectangle(cornerRadius: 8).stroke(Color.accentColor, lineWidth: 2).padding(-10)
-                    : nil
+                RoundedRectangle(cornerRadius: 8)
+                    .stroke(Color.accentColor, lineWidth: 2)
+                    .padding(-10)
+                    .opacity(isSelected ? 1 : 0)
             )
             .onTapGesture { onSelect() }
             .gesture(
@@ -80,8 +81,8 @@ struct PosterCanvas: View {
         ZStack {
             bg.onTapGesture { onSelect(nil) }
             ForEach($layers) { $layer in
-                PosterLayerView(layer: $layer, isSelected: layer.id == selectedID) {
-                    onSelect(layer.id)
+                PosterLayerView(layer: $layer, isSelected: $layer.wrappedValue.id == selectedID) {
+                    onSelect($layer.wrappedValue.id)
                 }
                 .position(x: canvasSize.width / 2, y: canvasSize.height / 2)
             }
